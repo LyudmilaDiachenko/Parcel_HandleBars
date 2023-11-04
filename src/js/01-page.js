@@ -1,5 +1,5 @@
 import headerTmp from "../templates/header.hbs"
-
+console.log(headerTmp);
 const refs = {
     header: document.querySelector("header"),
     main: document.querySelector(".cards"),
