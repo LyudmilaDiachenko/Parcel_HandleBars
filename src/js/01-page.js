@@ -1,12 +1,8 @@
-import headerTmp from "../templates/header.hbs"
-console.log(headerTmp);
-const refs = {
-    header: document.querySelector("header"),
-    main: document.querySelector(".cards"),
-    footer: document.querySelector("footer")
-}
+import header from "../templates/header.hbs"
+import footer from "../templates/footer.hbs"
+import cards from "../templates/cards.hbs"
+import data from "../js/data.json"
 
-const header = headerTmp()
-
-document.body.insertAdjacentHTML("afterbegin", header)
-
+document.querySelector("header").insertAdjacentHTML("afterbegin", header())
+document.querySelector(".js-cards").insertAdjacentHTML("beforeend", cards(data.tours))
+document.querySelector("footer").insertAdjacentHTML("beforeend", footer())
